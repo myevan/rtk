@@ -2,10 +2,12 @@
 
 # DAY-1
 
-## UI 구성
+## UI
+
+### Province
 
 ```
-Jan 189 AD                           
+Jan 189 AD (Spring)
                                1   | 9. Yong 
                              /     | Ruler: Cao Cao
   15                4 - 3 - 2      | Trust: 50
@@ -22,3 +24,55 @@ Jan 189 AD
   \  / \ /  \ / \  /  \ / \  /     |
    36 - 41 - 39  38 - 37 - 26      |
 ```
+
+### General
+
+```
+Guan Yu
+
+(Liu Bei's cohort)  Loy 100
+Arm    10  Rnk Act  Int  83
+Trn    10  Ser   1  War  99
+Men  1000  Age  28  Chr  91
+```
+
+## Model
+
+### Province
+
+* Number: 번호
+* Ruler: 군주
+* Governor: 태수
+* Advisor: 군사
+* Pop: 인구
+* Men: 병사
+* Gold: 자금
+* Food: 식량
+* Rate: 물가
+* Loy: 민충성도
+* Land: 토지가치
+* Flood: 치수도
+* Generals: 현역장수
+* FreeGens: 재야장수
+* Horses: 명마
+* Forts: 성채
+* Name: 이름
+
+### General
+
+* Debut: 등장년도
+* Birth: 출생년도
+* Trust: 신뢰도
+* Home: 출신
+* Int: 지력
+* War: 무력
+* Chr: 매력
+* Loy: 충성
+* Rnk: 지위
+* Ser: 연차
+* Men: 병사
+* Trn: 사기
+* Weap: 무기
+* RelShip: 관계
+* RelGen: 관계 장수
+* Name: 이름
