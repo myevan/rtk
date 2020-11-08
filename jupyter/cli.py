@@ -26,5 +26,27 @@ def show_rtk2_taiki_dat():
     for g in taiki.generals:
         print(f'birth={g.birth}, debut={g.debut}, home={g.home}, inte={g.intelligence}, wara={g.war_ability}, chrm={g.charm}, name="{g.name}"')
 
+@cli.command()
+def show_rtk2_hero_names():
+    import env
+    names = set()
+
+    from scenario import Scenario
+    s = Scenario.from_file(env.get_work_path('tmp', 'SCENARIO.DAT'))
+
+    for c in s.chapters:
+        for g in c.generals:
+            if g.birth > 0:
+                names.add(''.join(c for c in g.name if c.isalpha() or c.isspace()))
+
+    from taiki import Taiki
+    taiki = Taiki.from_file(env.get_work_path('tmp', 'TAIKI.DAT'))
+    for g in taiki.generals:
+        if g.birth > 0:
+            names.add(''.join(c for c in g.name if c.isalpha() or c.isspace()))
+
+    for name in sorted(names):
+        print(name)
+
 cli()
 
