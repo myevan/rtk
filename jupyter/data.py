@@ -114,8 +114,8 @@ class DeclMeta(type):
         return new_cls
 
 class Model(metaclass=DeclMeta):
-    __records = list()
-    __pk_records = dict()
+    _records = None
+    _pk_records = None
     __default_record = None
     __repr_limit = 3
 
@@ -135,20 +135,27 @@ class Model(metaclass=DeclMeta):
     def load_datas(cls, datas):
         cls.__records = [cls(*data) for data in datas]
         if cls.get_primary_key_names():
-            cls.__pk_records = dict((record.get_primary_key_values(), record) for record in cls.__records)
+            cls._pk_records = dict((record.get_primary_key_values(), record) for record in cls._records)
 
     @classmethod
     def get(cls, pk, default=None):
-        assert(cls.__pk_records)
-        return cls.__pk_records.get(pk, default if default else cls.__default_record)
+        assert(cls._pk_records)
+        return cls._pk_records.get(pk, default if default else cls.__default_record)
     
     @classmethod
     def put(cls, record):
         pk = record.get_primary_key_values()
-        cls.__pk_records[pk] = record
 
-        if not pk in cls.__pk_records:
-            cls.__records = record
+        if not cls._pk_records:
+            cls._pk_records = dict()
+
+        cls._pk_records[pk] = record
+
+        if not pk in cls._pk_records:
+            if not cls._records:
+                cls._records = list()
+
+            cls._records.append(record)
 
     @classmethod
     def set_default(cls, record):
@@ -221,6 +228,13 @@ class Position(Primitive):
 class Rotation(Primitive):
     def __init__(self, *args, **kwargs):
         Primitive.__init__(self, 'd', 0, *args, **kwargs) # 0: x+
+
+class Text:
+    def __init__(self, value):
+        self.__value = value
+
+    def __str__(self):
+        return self.__value
 
 if __name__ == '__main__':
     class User(Model):
