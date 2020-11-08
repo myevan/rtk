@@ -5,7 +5,7 @@ def cli():
     pass
 
 @cli.command()
-def show_scenarios():
+def show_rtk2_scenario_dat():
     import env
     from scenario import Scenario
     s = Scenario.from_file(env.get_work_path('tmp', 'SCENARIO.DAT'))
@@ -19,7 +19,7 @@ def show_scenarios():
         break
 
 @cli.command()
-def show_new_heroes():
+def show_rtk2_taiki_dat():
     import env
     from taiki import Taiki
     taiki = Taiki.from_file(env.get_work_path('tmp', 'TAIKI.DAT'))

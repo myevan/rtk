@@ -182,4 +182,22 @@ Men  1000  Age  28  Chr  91
     * QuitPlayer: 플레이 종료
     * QuitGame: 게임 종료
 
+## Analysis
 
+<https://rotk2.fandom.com/wiki/Scenario_Initialization>
+
+### SCENARIO.DAT 
+
+<https://github.com/myevan/rtk/blob/main/jupyter/scenario.ks>
+
+```bash
+$ ./jupyter/cli.sh show-rtk2-scenario-dat
+```
+
+### TAIKI.DAT
+
+<https://github.com/myevan/rtk/blob/main/jupyter/taiki.ks>
+
+```bash
+$ ./jupyter/cli.sh show-rtk2-taiki-dat
+```
