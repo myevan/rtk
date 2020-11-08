@@ -72,14 +72,18 @@ Men  1000  Age  28  Chr  91
 * Ser: 연차
 * Men: 병사
 * Trn: 사기
-* Weap: 무기
+* Weap: 무장
 * RelShip: 관계
 * RelGen: 관계 장수
 * Name: 이름
+* 야망
+* 의리
+* 인덕
+* 상성
 
 ## Day-2
 
-### Province
+### Provinces
 
 * 유주: 1, 2, 3
 * 병주: 4, 5
@@ -96,4 +100,93 @@ Men  1000  Age  28  Chr  91
 * 익주: 29, 30, 31, 32, 33, 34, 35, 36
 * 교주: 37, 38, 39, 40, 41
 
+### Functions
 
+* Rest: 대기(휴식)
+* Move: 이동
+* Send: 수송
+* War: 전쟁
+* Milit: 군사
+    * Hire: 징병
+    * Reassign: 재편성
+    * Train: 훈련
+* Person: 인사
+    * Recruit: 등용
+        * SpecialVisit: 삼고의예
+        * Horse: 명마
+        * Gold: 돈
+        * Letter: 편지
+    * Search: 수색
+    * Appoint: 임명
+        * Governor: 태수
+        * Advisor: 군사
+    * Dismiss: 해임
+        * General: 장수
+        * Advisor: 군사
+* Diplom: 외교
+    * Alliance: 동맹
+    * JointInvasion: 공동작전
+    * Marriage: 혼인
+    * Gift: 선물
+    * CancelAlliance: 동맹파기
+    * Threaten: 항복권고
+* Spy: 계략
+    * Infiltrate: 매복의독
+        * Hide: 매복
+        * Verify: 확인
+        * Withdraw: 철수
+    * RivalTrigers: 이호경식
+    * TrigerAndWolf: 구호탄랑
+    * Betrayal: 적중작적
+    * ForgedLetter: 위서의심
+* View: 정보
+    * Other provinces: 타국정보
+    * Generals: 장수정보
+    * Summary1: 장수요약1
+    * Summary2: 장수요약2
+    * Territory: 속령목록
+    * DataOrder: 정렬순서
+        * Intellect 지력
+        * WarAbility 무력
+        * Charm 매력
+        * Men 병사수
+        * Loyalty 충성도
+* Cultiv: 개발
+* Flood: 치수
+* Reward: 포상
+    * Gold: 돈
+    * Horse: 명마
+    * Wrtings: 서적
+* Give: 선정
+* Merch: 매매
+    * SellFood: 식량 판매
+    * BuyFood: 식량 구매
+    * BuyHorses: 명마 구매
+    * BuyWeapons: 무기 구매
+* Map: 지도
+* Delegate: 위임
+* Exile: 방랑
+* Advice: 특별 
+    * Advice: 군사조언
+    * Rumors: 소문
+    * Healing: 치료
+* Other: 기타
+    * Wait: 대기
+        * MessageWait: 서신속도
+        * MessengerSpeed: 사신속도
+    * Graphics: 도
+    * Music: 배경음
+    * SoundEffects: 효과음
+    * Save: 저장
+    * HEXWar: 전쟁
+    * QuitPlayer: 플레이 종료
+    * QuitGame: 게임 종료
+
+### Blance
+
+신군주 중간 난이도
+
+* Gold: 100 -> 2000
+* Food: 2000 -> 20000
+* Loy: 15 -> 65
+* Men: 11000 (10000  +1000)
