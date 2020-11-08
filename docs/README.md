@@ -105,10 +105,10 @@ Men  1000  Age  28  Chr  91
 * Move: 이동
 * Send: 수송
 * War: 전쟁
-* Milit: 군사
+* Military: 군사
     * Hire: 징병
     * Reassign: 재편성
-    * Train: 훈련
+    * Training: 훈련
 * Person: 인사
     * Recruit: 등용
         * SpecialVisit: 삼고의예
@@ -122,7 +122,7 @@ Men  1000  Age  28  Chr  91
     * Dismiss: 해임
         * General: 장수
         * Advisor: 군사
-* Diplom: 외교
+* Diplomacy: 외교
     * Alliance: 동맹
     * JointInvasion: 공동작전
     * Marriage: 혼인
@@ -145,19 +145,19 @@ Men  1000  Age  28  Chr  91
     * Summary2: 장수요약2
     * Territory: 속령목록
     * DataOrder: 정렬순서
-        * Intellect 지력
+        * Intelligence 지력
         * WarAbility 무력
         * Charm 매력
         * Men 병사수
         * Loyalty 충성도
-* Cultiv: 개발
+* Cultivate: 개발
 * Flood: 치수
 * Reward: 포상
     * Gold: 돈
     * Horse: 명마
     * Wrtings: 서적
 * Give: 선정
-* Merch: 매매
+* Merchant: 매매
     * SellFood: 식량 판매
     * BuyFood: 식량 구매
     * BuyHorses: 명마 구매
@@ -173,7 +173,7 @@ Men  1000  Age  28  Chr  91
     * Wait: 대기
         * MessageWait: 서신속도
         * MessengerSpeed: 사신속도
-    * Graphics: 도
+    * Graphics: 그래픽
     * Music: 배경음
     * SoundEffects: 효과음
     * Save: 저장
