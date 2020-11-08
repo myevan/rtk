@@ -72,14 +72,13 @@ Men  1000  Age  28  Chr  91
 * Ser: 연차
 * Men: 병사
 * Trn: 사기
-* Weap: 무장
-* RelShip: 관계
-* RelGen: 관계 장수
+* Weapon: 무장
 * Name: 이름
-* 야망
-* 의리
-* 인덕
-* 상성
+* Lineage: 혈연
+* Ambition: 야망
+* Lawfulness: 의리
+* Virtue: 인덕
+* Alignment: 상성
 
 ## Day-2
 
