@@ -167,11 +167,11 @@ types:
         type: u1
       - id: unknown3
         size: 4
-      - id: coord1
+      - id: region1
         type: u1
-      - id: coord2
+      - id: region2
         type: u1
-      - id: region
+      - id: region3
         type: u1
-      - id: unknown4
+      - id: region4 
         type: u1

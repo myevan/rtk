@@ -143,10 +143,10 @@ class Scenario(KaitaiStruct):
             self.num_horses = self._io.read_u1()
             self.num_forts = self._io.read_u1()
             self.unknown3 = self._io.read_bytes(4)
-            self.coord1 = self._io.read_u1()
-            self.coord2 = self._io.read_u1()
-            self.region = self._io.read_u1()
-            self.unknown4 = self._io.read_u1()
+            self.region1 = self._io.read_u1()
+            self.region2 = self._io.read_u1()
+            self.region3 = self._io.read_u1()
+            self.region4 = self._io.read_u1()
 
 
     class Special(KaitaiStruct):
