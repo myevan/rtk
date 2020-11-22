@@ -1,4 +1,4 @@
-idx,pop,gold,food,hrs,loy,lnd,fld,fct,gov,r1,r2,r3,rgn
+id,pop,gold,food,hrs,loy,lnd,fld,fct,gov,r1,r2,r3,rgn
 1,650,100,2000,5,5,10,5,255,0,0,6,0,0
 2,700,100,2000,5,5,10,5,255,0,0,5,0,0
 3,1000,1000,25000,10,35,55,30,9,475,0,4,1,0

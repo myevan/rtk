@@ -14,10 +14,10 @@ class Province(Model):
     gold = Integer()
     food = Integer()
     rate = Integer()
-    horses = Integer()
+    hrs = Integer()
     loy = Integer()
-    land = Integer()
-    flood = Integer()
+    lnd = Integer()
+    fld = Integer()
     forts = Integer()
     ruler_id = Integer(fk=lambda: Hero.id)
     governor_id = Integer(fk=lambda: Hero.id)
@@ -67,13 +67,13 @@ class Province(Model):
 
     def gen_body_lines(self):
         yield f"Pop: {self.pop:>7}  Gold: {self.gold:>6}  Loy: {self.loy:>5}"
-        yield f"Men: {self.men:>7}  Food: {self.food:>6}  Land: {self.land:>4}"
-        yield f"Generals: {self.generals:>2}  Rate: {self.rate:>6}  Flood: {self.flood:>3}"
-        yield f"FreeGens: {self.free_gens:>2}  Horses: {self.horses:>4}  Forts: {self.forts:>3}"
+        yield f"Men: {self.men:>7}  Food: {self.food:>6}  Land: {self.lnd:>4}"
+        yield f"Generals: {self.generals:>2}  Rate: {self.rate:>6}  Flood: {self.fld:>3}"
+        yield f"FreeGens: {self.free_gens:>2}  Horses: {self.hrs:>4}  Forts: {self.forts:>3}"
 
 if __name__ == "__main__":
     Hero.set_default(Hero(id=0, name=T("무명")))   
     Hero.put(Hero(id=6,  inte=95, wara=91, chrm=95, birth=189-35, trust=50, arm=10, trn=10, men=10000, name=T("조조")))
-    Province.put(Province(id=9, pop=350000,  gold=1000, food=40000, rate=41, horses=20, loy=60, land=60, flood=30, forts=2, ruler_id=6,  governor_id=0, name=T("연주")))
+    Province.put(Province(id=9, pop=350000,  gold=1000, food=40000, rate=41, hrs=20, loy=60, lnd=60, fld=30, forts=2, ruler_id=6,  governor_id=0, name=T("연주")))
     print(Province.get(9).head)
     print(Province.get(9).body)
