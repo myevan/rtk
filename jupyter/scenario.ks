@@ -41,7 +41,7 @@ types:
         size: 16
   general:
     seq:
-      - id: gnid
+      - id: next
         type: u2
       - id: unknown1
         type: u2

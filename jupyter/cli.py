@@ -22,14 +22,16 @@ def export_rtk2_scenario_dat():
         print(f"rulers num={c.head.num_rulers} colors={','.join(f'{color}' for color in c.head.ruler_colors)}")
 
         l_cols = ['birth', 'intelligence', 'war_ability', 'charm', 'lawfulness', 'virtue', 'ambition', 'faction', 'loyalty', 'service', 'alignment', 'lineage','men', 'weapon', 'training', 'name']
-        s_cols = ['bir', 'int', 'war', 'chr', 'law', 'vir', 'amb', 'fct', 'loy', 'srv', 'ali', 'lin','men', 'wpn', 'trn', 'name']
+        s_cols = ['id', 'next', 'bir', 'int', 'war', 'chr', 'law', 'vir', 'amb', 'fct', 'loy', 'srv', 'ali', 'lin','men', 'wpn', 'trn', 'name']
         with open(os.path.join(csv_dir_path, f'{ci+1}_generals.csv'), 'w') as csvf:
             csvw = csv.writer(csvf)
             csvw.writerow(s_cols)
-            for g in c.generals:
+            for id, g in enumerate(c.generals):
                 if g.birth > 0:
                     name = ''.join(c for c in g.name if c.isalpha() or c.isspace())
-                    values = [getattr(g, col) for col in l_cols[:-1]]
+                    next_gen_id = (g.next - 45) // 43 if g.next else 0
+                    values = [id + 1, next_gen_id]
+                    values += [getattr(g, col) for col in l_cols[:-1]]
                     values.append(name)
                     csvw.writerow(values)
 

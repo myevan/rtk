@@ -95,7 +95,7 @@ class Scenario(KaitaiStruct):
             self._read()
 
         def _read(self):
-            self.gnid = self._io.read_u2le()
+            self.next = self._io.read_u2le()
             self.unknown1 = self._io.read_u2le()
             self.intelligence = self._io.read_u1()
             self.war_ability = self._io.read_u1()
