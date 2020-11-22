@@ -41,10 +41,22 @@ def export_rtk2_scenario_dat():
             csvw = csv.writer(csvf)
             csvw.writerow(s_cols)
             for pi, p in enumerate(c.provinces):
+                p.governor = (p.governor - 45) // 43 if p.governor else 0
                 values = [pi + 1]
                 values += [getattr(p, col) for col in l_cols]
                 csvw.writerow(values)
 
+        l_cols = ['general', 'capital', 'advisor', 'trust', 'ally', 'hostilities', 'joint_invasion_ally', 'join_invasion_target', 'target_province_faction_owner', 'marriage', 'exile']
+        s_cols = ['gen', 'cap', 'adv', 'tru', 'ally', 'hstl', 'jia', 'jit', 'tpfo', 'mar', 'exi']
+        with open(os.path.join(csv_dir_path, f'{ci+1}_rulers.csv'), 'w') as csvf:
+            csvw = csv.writer(csvf)
+            csvw.writerow(s_cols)
+            for r in c.rulers:
+                r.general = (r.general - 45) // 43 if r.general else 0
+                r.capital = (r.capital - 11716) // 35 + 1 if r.capital else 0
+                r.advisor = (r.advisor - 45) // 43 if r.advisor else 0
+                values = [getattr(r, col) for col in l_cols]
+                csvw.writerow(values)
         break
 
 @cli.command()
