@@ -26,8 +26,8 @@ class Primitive:
         cls.__seq += 1
         return cls.__seq
 
-    def __init__(self, builtin_code, builtin_value, count=None, pk=False, fk=None, default=None, name=None, code=None):
-        self.__seq = Primitive.alloc_sequence()
+    def __init__(self, builtin_code=None, builtin_value=None, count=None, pk=False, fk=None, default=None, name=None, code=None):
+        self.__seq = Primitive.alloc_sequence() if builtin_code else 0
         self.__count = count
         self.__pk = pk
         self.__fk = fk
@@ -235,6 +235,11 @@ class Text:
 
     def __str__(self):
         return self.__value
+
+class Table:
+    def __init__(self, field_names, records):
+        self.field_names = field_names
+        self.records = records
 
 if __name__ == '__main__':
     class User(Model):
