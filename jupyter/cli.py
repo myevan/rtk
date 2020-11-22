@@ -34,7 +34,7 @@ def export_rtk2_scenario_dat():
                     csvw.writerow(values)
 
         l_cols = ['pop', 'gold', 'food', 'num_horses', 'pop_loyalty', 'land_dev', 'flood_dev', 'faction', 'governor', 'region1', 'region2', 'region3', 'region4']
-        s_cols = ['idx', 'pop', 'gold', 'food', 'hrs', 'loy', 'lnd', 'fld', 'fct', 'gov', 'r1', 'r2', 'r3', 'rgn']
+        s_cols = ['id', 'pop', 'gold', 'food', 'hrs', 'loy', 'lnd', 'fld', 'fct', 'gov', 'r1', 'r2', 'r3', 'rgn']
         with open(os.path.join(csv_dir_path, f'{ci+1}_provinces.csv'), 'w') as csvf:
             csvw = csv.writer(csvf)
             csvw.writerow(s_cols)
