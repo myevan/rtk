@@ -120,6 +120,10 @@ class Model(metaclass=DeclMeta):
     __repr_limit = 3
 
     @classmethod
+    def get_field_name_types(cls):
+        return dict(zip(cls._field_names, cls._field_types))
+
+    @classmethod
     def get_field_names(cls):
         return cls._field_names
 
@@ -237,9 +241,10 @@ class Text:
         return self.__value
 
 class Table:
-    def __init__(self, field_names, records):
-        self.field_names = field_names
-        self.records = records
+    def __init__(self, heads, rows, types=[]):
+        self.heads = heads
+        self.rows = rows
+        self.types = types
 
 if __name__ == '__main__':
     class User(Model):
