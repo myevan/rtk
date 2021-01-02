@@ -187,7 +187,7 @@ Men  1000  Age  28  Chr  91
 
 ### SCENARIO.DAT 
 
-<https://github.com/myevan/rtk/blob/main/jupyter/scenario.ks>
+<https://github.com/myevan/rtk/blob/main/jupyter/scenario.ksy>
 
 ```bash
 $ ./jupyter/cli.sh show-rtk2-scenario-dat
@@ -195,7 +195,7 @@ $ ./jupyter/cli.sh show-rtk2-scenario-dat
 
 ### TAIKI.DAT
 
-<https://github.com/myevan/rtk/blob/main/jupyter/taiki.ks>
+<https://github.com/myevan/rtk/blob/main/jupyter/taiki.ksy>
 
 ```bash
 $ ./jupyter/cli.sh show-rtk2-taiki-dat
